@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Indian Cuisine - Virtual Tour of India</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background-color: #fff8e1;
+      color: #4e342e;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #ff7043;
+      color: #fff;
+      padding: 25px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2em;
+    }
+
+    main {
+      max-width: 850px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    section {
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      color: #bf360c;
+      font-size: 1.6em;
+    }
+
+    .more-content {
+      display: none;
+      margin-top: 15px;
+      font-size: 1rem;
+    }
+
+    .btn-toggle {
+      background-color: #ff5722;
+      color: #fff;
+      border: none;
+      padding: 10px 18px;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background 0.3s;
+    }
+
+    .btn-toggle:hover {
+      background-color: #e64a19;
+    }
+
+    footer {
+      background-color: #bf360c;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.6em;
+      }
+
+      h2 {
+        font-size: 1.3em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Cuisine</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Introduction</h2>
+      <p>
+        Indian cuisine is a vibrant blend of flavors, spices, and cooking traditions passed down through generations. It reflects the country's diverse cultures, climates, and regions.
+      </p>
+    </section>
+
+    <section>
+      <h2>Regional Delicacies</h2>
+      <p>
+        From the creamy gravies of the North to the tangy curries of the South, India’s cuisine is as varied as its landscape. Each state brings its own signature taste and tradition.
+      </p>
+    </section>
+
+    <section>
+      <h2>Ingredients & Spices</h2>
+      <p>
+        Indian cooking uses a rich palette of spices like turmeric, cumin, coriander, cardamom, and garam masala to enhance both flavor and health.
+      </p>
+
+      <div class="more-content" id="extraText">
+        <p>
+          Northern regions are known for tandoori dishes, naan, paneer, and wheat-based breads. Southern India features rice, coconut, tamarind, sambar, and dosa.  
+        </p>
+        <p>
+          In the West, Gujarat offers vegetarian thalis and Maharashtra delights with vada pav and pav bhaji. Eastern India includes rice, fish, sweets like rasgulla, and mustard-based curries.  
+        </p>
+        <p>
+          Indian cuisine also emphasizes seasonal eating, ayurvedic principles, and community cooking — such as langars and traditional feasts during festivals.
+        </p>
+      </div>
+
+      <button class="btn-toggle" id="toggleBtn">Read More</button>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Virtual Tour of India | Taste the Culture
+  </footer>
+
+  <script>
+    const btn = document.getElementById('toggleBtn');
+    const extraText = document.getElementById('extraText');
+
+    btn.addEventListener('click', () => {
+      const isVisible = extraText.style.display === 'block';
+      extraText.style.display = isVisible ? 'none' : 'block';
+      btn.textContent = isVisible ? 'Read More' : 'Read Less';
+    });
+  </script>
+
+</body>
+</html>

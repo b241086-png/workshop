@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Diwali - Festival of Lights</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #a1d5ab;
+      color: #333;
+    }
+
+    header {
+      background: url('https://upload.wikimedia.org/wikipedia/commons/2/20/Diwali_diya_lamps.jpg') no-repeat center center/cover;
+      height: 300px;
+      color: white;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      text-shadow: 2px 2px 5px #000;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      font-style: italic;
+      text-shadow: 1px 1px 3px #000;
+    }
+
+    section {
+      padding: 2rem;
+    }
+
+    .about {
+      background-color: #bce4be;
+    }
+
+    .celebrations ul {
+      margin-top: 1rem;
+      padding-left: 1.5rem;
+    }
+
+    .celebrations li {
+      margin-bottom: 0.5rem;
+    }
+
+    .light-diya {
+      margin-top: 2rem;
+      text-align: center;
+    }
+
+    button {
+      background-color: #116232;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #58c036;
+    }
+
+    #diya {
+      margin-top: 20px;
+      display: none;
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        opacity: 0.5;
+        filter: drop-shadow(0 0 10px rgb(73, 167, 68));
+      }
+      to {
+        opacity: 1;
+        filter: drop-shadow(0 0 25px rgb(52, 170, 62));
+      }
+    }
+
+    footer {
+      background-color: #044b04;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+    h2{
+        text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Onam</h1>
+    <p>The Festival of annual harvest</p>
+  </header>
+
+  <section class="about">
+    <h2>About Onam</h2>
+    <p>Onam is an annual harvest festival and a major cultural event celebrated primarily in Kerala, India. It's a ten-day festival that usually falls between August and September. Onam commemorates the return of the legendary King Mahabali, and is also a celebration of the harvest season</p></section>
+
+  <section class="celebrations">
+    <h2>How Onam is Celebrated</h2>
+    <ul>
+      <li>vibrant decorations like Pookkalam</li>
+      <li>traditional dances such as Thiruvathira and Kaikottikali</li>
+      <li>People also participate in boat races</li>
+      <li>promotes unity and brings families </li>
+    </ul>
+  </section>
+
+  <div class="light-diya">
+    <button onclick="onam()">onam food 🌾</button>
+    <div id="diya">
+      <img src="onam food.jpeg" alt="Glowing Diya" width="200" />
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Diwali Celebration. Stay safe & shine bright!</p>
+  </footer>
+
+  <script>
+    function onam() {
+      const diya = document.getElementById('diya');
+      diya.style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>

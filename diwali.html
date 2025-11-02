@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Diwali - Festival of Lights</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f1c1b0;
+      color: #333;
+    }
+
+    header {
+      background: url('https://upload.wikimedia.org/wikipedia/commons/2/20/Diwali_diya_lamps.jpg') no-repeat center center/cover;
+      height: 300px;
+      color: white;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      text-shadow: 2px 2px 5px #000;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      font-style: italic;
+      text-shadow: 1px 1px 3px #000;
+    }
+
+    section {
+      padding: 2rem;
+    }
+
+    .about {
+      background-color: #f2b78f;
+    }
+
+    .celebrations ul {
+      margin-top: 1rem;
+      padding-left: 1.5rem;
+    }
+
+    .celebrations li {
+      margin-bottom: 0.5rem;
+    }
+
+    .light-diya {
+      margin-top: 2rem;
+      text-align: center;
+    }
+
+    button {
+      background-color: #e07240;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #e65100;
+    }
+
+    #diya {
+      margin-top: 20px;
+      display: none;
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        opacity: 0.5;
+        filter: drop-shadow(0 0 10px orange);
+      }
+      to {
+        opacity: 1;
+        filter: drop-shadow(0 0 25px gold);
+      }
+    }
+
+    footer {
+      background-color: #ff6f00;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+    h2{
+        text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Diwali</h1>
+    <p>The Festival of Lights</p>
+  </header>
+
+  <section class="about">
+    <h2>About Diwali</h2>
+    <p>Diwali is a major Indian festival celebrating the victory of light over darkness and good over evil. Homes are decorated with lamps, families come together, and fireworks light up the night sky.</p>
+  </section>
+
+  <section class="celebrations">
+    <h2>How Diwali is Celebrated</h2>
+    <ul>
+      <li>Lighting diyas and candles</li>
+      <li>Decorating homes with rangoli</li>
+      <li>Worshiping Goddess Lakshmi</li>
+      <li>Sharing sweets and gifts</li>
+      <li>Bursting crackers</li>
+    </ul>
+  </section>
+
+  <div class="light-diya">
+    <button onclick="lightDiya()">Light a Diya 🪔</button>
+    <div id="diya">
+      <img src="diya.jpeg" alt="Glowing Diya" width="100" />
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Diwali Celebration. Stay safe & shine bright!</p>
+  </footer>
+
+  <script>
+    function lightDiya() {
+      const diya = document.getElementById('diya');
+      diya.style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>

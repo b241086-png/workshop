@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Folk Music of India - Virtual Tour</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fff8e1;
+      color: #222;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      display: flex;
+      max-width: 1000px;
+      width: 100%;
+      background: white;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      overflow: hidden;
+      flex-wrap: wrap;
+    }
+
+    .left, .right {
+      flex: 1 1 400px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .left {
+      background: #ef6c00;
+      color: white;
+    }
+
+    .left h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .left p {
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+
+    .more-text {
+      display: none;
+      margin-top: 15px;
+      font-size: 1rem;
+      color: #ffecb3;
+    }
+
+    .btn-toggle {
+      margin-top: 20px;
+      background: #d84315;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      font-size: 1rem;
+      color: white;
+      cursor: pointer;
+      align-self: flex-start;
+      transition: background 0.3s ease;
+      user-select: none;
+    }
+
+    .btn-toggle:hover {
+      background: #e64a19;
+    }
+
+    .right img,
+    .right iframe {
+      width: 100%;
+      border-radius: 12px;
+      max-height: 350px;
+      object-fit: cover;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    }
+
+    @media (max-width: 800px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .left, .right {
+        padding: 20px;
+      }
+
+      .right img,
+      .right iframe {
+        max-height: 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <main class="container" role="main" aria-label="Folk Music of India">
+
+    <!-- Left Section (Text) -->
+    <section class="left">
+      <h1>Folk Music of India</h1>
+      <p>
+        India’s folk music reflects the diversity of its regions, languages, festivals, and rural traditions. Each state and community offers its own unique sound and story.
+      </p>
+
+      <div class="more-text" id="moreText">
+        <p>
+          From the soulful **Baul** songs of Bengal, to the vibrant **Lavani** of Maharashtra, to the desert tunes of **Manganiyars** in Rajasthan — folk music expresses love, nature, daily life, and spiritual devotion.
+        </p>
+        <p>
+          Instruments like the **ektara**, **dhol**, **shehnai**, and **algoza** bring these stories to life. These traditions are passed orally through generations and are performed at fairs, weddings, and festivals across the country.
+        </p>
+      </div>
+
+      <button class="btn-toggle" aria-expanded="false" aria-controls="moreText" id="toggleBtn">
+        Show More
+      </button>
+    </section>
+
+    <!-- Right Section (Media) -->
+    <section class="right">
+      <img 
+        src="folk1.jpeg" 
+        alt="Indian folk musicians playing traditional instruments"
+      />
+
+     
+    </section>
+
+  </main>
+
+  <script>
+    const toggleBtn = document.getElementById('toggleBtn');
+    const moreText = document.getElementById('moreText');
+
+    toggleBtn.addEventListener('click', () => {
+      const isHidden = moreText.style.display === 'none' || moreText.style.display === '';
+      moreText.style.display = isHidden ? 'block' : 'none';
+      toggleBtn.textContent = isHidden ? 'Show Less' : 'Show More';
+      toggleBtn.setAttribute('aria-expanded', isHidden);
+    });
+  </script>
+
+</body>
+</html>

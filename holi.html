@@ -1,0 +1,144 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Diwali - Festival of Lights</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff8e1;
+      color: #333;
+    }
+
+    header {
+      background: url('https://upload.wikimedia.org/wikipedia/commons/2/20/Diwali_diya_lamps.jpg') no-repeat center center/cover;
+      height: 300px;
+      color: white;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      text-shadow: 2px 2px 5px #000;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      font-style: italic;
+      text-shadow: 1px 1px 3px #000;
+    }
+
+    section {
+      padding: 2rem;
+    }
+
+    .about {
+      background-color: #efd0eb;
+    }
+
+    .celebrations ul {
+      margin-top: 1rem;
+      padding-left: 1.5rem;
+    }
+
+    .celebrations li {
+      margin-bottom: 0.5rem;
+    }
+
+    .light-diya {
+      margin-top: 2rem;
+      text-align: center;
+    }
+
+    button {
+      background-color: #db67c8;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #e96fe3;
+    }
+
+    #diya {
+      margin-top: 20px;
+      display: none;
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        opacity: 0.5;
+        filter: drop-shadow(0 0 10px rgb(164, 67, 149));
+      }
+      to {
+        opacity: 1;
+        filter: drop-shadow(0 0 25px rgb(190, 73, 175));
+      }
+    }
+
+    footer {
+      background-color: #b352c5;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+    h2{
+        text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Holi</h1>
+    <p>The Festival of Colours</p>
+  </header>
+
+  <section class="about">
+    <h2>About Holi</h2>
+    <p>Holi is a major Hindu festival celebrated as the Festival of Colours, Love and Spring. It celebrates the eternal and divine love of the deities Radha and Krishna.Additionally, the day signifies the triumph of good over evil,as it commemorates the victory of Vishnu as Narasimha over Hiranyakashipu.Holi originated and is predominantly celebrated in the Indian subcontinent, but has also spread to other regions of Asia and parts of the Western world through the Indian diaspora.</p>
+ 
+  </section>
+
+  <section class="celebrations">
+    <h2>How Holi is Celebrated</h2>
+    <ul>
+      <li>Holika Dahan is performed a day before Holi.</li>
+      <li>People play with colours and water</li>
+      <li>Traditional sweets like gujiya and thandai are enjoyed.</li>
+      <li>Hindu festival celebrated in India.</li>
+      <li>It marks the victory of good over evil.</li>
+    </ul>
+  </section>
+
+  <div class="light-diya">
+    <button onclick="colourburst()">Colour Burst</button>
+    <div id="diya">
+      <img src="colourburst.jpeg" alt="Glowing Diya" width="100" />
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Holi Celebration. Stay safe & shine bright!</p>
+  </footer>
+
+  <script>
+    function colourburst() {
+      const diya = document.getElementById('diya');
+      diya.style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>

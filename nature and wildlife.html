@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nature & Wildlife of India - Virtual Tour</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background-color: #f1f8e9;
+      color: #2e7d32;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #1b5e20;
+      color: #fff;
+      padding: 25px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2em;
+    }
+
+    main {
+      max-width: 850px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    section {
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      color: #33691e;
+      font-size: 1.6em;
+    }
+
+    .more-content {
+      display: none;
+      margin-top: 15px;
+      font-size: 1rem;
+    }
+
+    .btn-toggle {
+      background-color: #43a047;
+      color: #fff;
+      border: none;
+      padding: 10px 18px;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background 0.3s;
+    }
+
+    .btn-toggle:hover {
+      background-color: #2e7d32;
+    }
+
+    footer {
+      background-color: #1b5e20;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.6em;
+      }
+
+      h2 {
+        font-size: 1.3em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Nature & Wildlife</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>India's Natural Wealth</h2>
+      <p>
+        India is one of the most biodiverse countries in the world. From the icy Himalayas to lush tropical forests, deserts to coastal mangroves — India's geography hosts an amazing range of ecosystems.
+      </p>
+    </section>
+
+    <section>
+      <h2>Wildlife Diversity</h2>
+      <p>
+        Home to majestic animals like the Bengal tiger, Indian elephant, and Asiatic lion, India also protects endangered species like the one-horned rhinoceros, snow leopard, and red panda.
+      </p>
+    </section>
+
+    <section>
+      <h2>Protected Areas & Conservation</h2>
+      <p>
+        With over 100 national parks and 500+ wildlife sanctuaries, India has taken major steps toward conservation. Famous reserves include Jim Corbett, Kaziranga, Sundarbans, and Ranthambore.
+      </p>
+
+      <div class="more-content" id="extraText">
+        <p>
+          The Western Ghats and the Eastern Himalayas are recognized as global biodiversity hotspots. Conservation programs like Project Tiger and Project Elephant have helped raise awareness and protect habitats.
+        </p>
+        <p>
+          Indian culture respects nature deeply, with forests, rivers, and animals considered sacred in many communities. Sustainable practices and community involvement are key to preserving this natural heritage.
+        </p>
+      </div>
+
+      <button class="btn-toggle" id="toggleBtn">Read More</button>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Virtual Tour of India | Experience Nature | Celebrate Wildlife
+  </footer>
+
+  <script>
+    const btn = document.getElementById('toggleBtn');
+    const extraText = document.getElementById('extraText');
+
+    btn.addEventListener('click', () => {
+      const isVisible = extraText.style.display === 'block';
+      extraText.style.display = isVisible ? 'none' : 'block';
+      btn.textContent = isVisible ? 'Read More' : 'Read Less';
+    });
+  </script>
+
+</body>
+</html>

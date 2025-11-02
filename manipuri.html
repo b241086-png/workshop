@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Manipuri - Virtual Tour of India</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #fce4ec);
+      color: #333;
+    }
+
+    header {
+      background-color: #00796b;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.2em;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    img {
+      width: 50%;
+      border-radius: 10px;
+      margin-top: 20px;
+      object-fit: cover;
+      max-height: 400px;
+    }
+
+    .description {
+      margin-top: 20px;
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    .more-text {
+      display: none;
+      margin-top: 10px;
+    }
+
+    button {
+      background-color: #00796b;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+
+    button:hover {
+      background-color: #009688;
+    }
+
+    iframe {
+      margin-top: 30px;
+      width: 100%;
+      height: 400px;
+      border: none;
+      border-radius: 10px;
+    }
+
+    footer {
+      background-color: #00796b;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Manipuri Dance</h1>
+    <p>Grace and Devotion from the Northeast of India</p>
+  </header>
+
+  <div class="container">
+    
+    <div class="description">
+      <p>
+        Manipuri is one of the eight classical dance forms of India, originating from the northeastern state of Manipur. It is known for its graceful movements, devotional themes, and traditional costumes.
+      </p>
+
+      <div class="more-text" id="moreText">
+        <p>
+          Unlike many other Indian classical dances, Manipuri focuses on smooth, flowing movements without sharp strikes. It is deeply rooted in the Vaishnavite traditions, often depicting the Raslila – the divine dance of Lord Krishna and Radha. The dance is accompanied by traditional Manipuri music and instruments like the Pung (drum).
+        </p>
+        <p>
+          Dancers wear elegant costumes — women in cylindrical skirts and translucent veils, men in bright dhotis and turbans. The overall performance radiates serenity and devotion, making Manipuri distinct and spiritually rich.
+        </p>
+      </div>
+
+      <button onclick="toggleText()">Show More</button><br><br>
+<img src="manipuri1.jpeg" alt="Manipuri Dance">
+
+     </div>
+     </div>
+
+  <footer>
+    &copy; 2025 Virtual Tour of India | Manipuri Dance
+  </footer>
+
+  <script>
+    function toggleText() {
+      const text = document.getElementById("moreText");
+      const btn = document.querySelector("button");
+      if (text.style.display === "none" || text.style.display === "") {
+        text.style.display = "block";
+        btn.textContent = "Show Less";
+      } else {
+        text.style.display = "none";
+        btn.textContent = "Show More";
+      }
+    }
+  </script>
+
+</body>
+</html>

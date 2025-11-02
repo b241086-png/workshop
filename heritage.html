@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Heritage of India - Virtual Tour</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background-color: #f9f5ed;
+      color: #333;
+      line-height: 1.6;
+      padding: 0;
+    }
+
+    header {
+      background-color: #4e342e;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2em;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    section {
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      color: #6d4c41;
+      font-size: 1.6em;
+    }
+
+    .more-content {
+      display: none;
+      margin-top: 15px;
+      font-size: 1rem;
+    }
+
+    .btn-toggle {
+      background-color: #8d6e63;
+      color: #fff;
+      border: none;
+      padding: 10px 18px;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background 0.3s;
+    }
+
+    .btn-toggle:hover {
+      background-color: #6d4c41;
+    }
+
+    footer {
+      background-color: #3e2723;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.6em;
+      }
+
+      h2 {
+        font-size: 1.3em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Heritage</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Introduction</h2>
+      <p>
+        India's heritage is a blend of its long history, diverse cultures, and rich traditions. The monuments, scriptures, festivals, music, and rituals reflect centuries of civilization and change.
+      </p>
+    </section>
+
+    <section>
+      <h2>Historical Monuments</h2>
+      <p>
+        India is home to thousands of historical sites such as forts, palaces, and ancient cities that stand as a testament to its glorious past.
+      </p>
+    </section>
+
+    <section>
+      <h2>Traditional Practices</h2>
+      <p>
+        Heritage also includes India's traditional knowledge systems, arts, crafts, yoga, and Ayurveda which are passed down generations.
+      </p>
+
+      <div class="more-content" id="extraText">
+        <p>
+          Practices like handloom weaving, classical music, folk theatre, and oral storytelling traditions form the cultural backbone of many rural communities. Each region has its own distinct customs and legacy.
+        </p>
+        <p>
+          Indian heritage is also spiritual — from Vedic rituals to Bhakti movements, from Buddhist chants to Sufi poetry — reflecting the inner life of its people.
+        </p>
+      </div>
+
+      <button class="btn-toggle" id="toggleBtn">Read More</button>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Virtual Tour of India | Explore | Learn | Experience
+  </footer>
+
+  <script>
+    const btn = document.getElementById('toggleBtn');
+    const extraText = document.getElementById('extraText');
+
+    btn.addEventListener('click', () => {
+      const isVisible = extraText.style.display === 'block';
+      extraText.style.display = isVisible ? 'none' : 'block';
+      btn.textContent = isVisible ? 'Read More' : 'Read Less';
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gallery - Virtual Tour of India</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background-color: #f3f3f3;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #3f51b5;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    .gallery-item {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin-bottom: 25px;
+    }
+
+    .gallery-item h2 {
+      color: #3f51b5;
+      font-size: 1.4em;
+      margin-top: 0;
+    }
+
+    .more-text {
+      display: none;
+      margin-top: 10px;
+    }
+
+    .btn-toggle {
+      background-color: #303f9f;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      margin-top: 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.95em;
+      transition: background 0.3s;
+    }
+
+    .btn-toggle:hover {
+      background-color: #1a237e;
+    }
+
+    footer {
+      background-color: #303f9f;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5em;
+      }
+
+      .gallery-item h2 {
+        font-size: 1.2em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Virtual Tour of India – Gallery</h1>
+  </header>
+
+  <main>
+
+    <div class="gallery-item">
+      <h2>Taj Mahal, Agra</h2>
+      <p>The Taj Mahal is a white marble mausoleum built by Mughal emperor Shah Jahan. It is one of the New Seven Wonders of the World.</p>
+      <div class="more-text">
+        <p>This UNESCO World Heritage Site is a symbol of eternal love, blending Persian, Islamic, and Indian architectural styles. Its beauty changes with light throughout the day.</p>
+      </div>
+      <button class="btn-toggle">Read More</button>
+    </div>
+
+    <div class="gallery-item">
+      <h2>Khajuraho Temples, Madhya Pradesh</h2>
+      <p>Khajuraho is known for its stunning temples decorated with intricate erotic sculptures, reflecting India’s artistic excellence.</p>
+      <div class="more-text">
+        <p>Built between 950–1050 AD by the Chandela dynasty, these temples represent devotion, passion, and life in stone carvings.</p>
+      </div>
+      <button class="btn-toggle">Read More</button>
+    </div>
+
+    <div class="gallery-item">
+      <h2>Kathak Dance Performance</h2>
+      <p>One of the eight classical dance forms of India, Kathak narrates stories through rhythmic footwork and expressive gestures.</p>
+      <div class="more-text">
+        <p>Originating from North India, Kathak evolved in the Mughal courts and temples, with music and storytelling at its core.</p>
+      </div>
+      <button class="btn-toggle">Read More</button>
+    </div>
+
+    <div class="gallery-item">
+      <h2>Sun Temple, Konark</h2>
+      <p>This 13th-century temple is shaped like a gigantic chariot and dedicated to the sun god Surya.</p>
+      <div class="more-text">
+        <p>It showcases India’s advanced knowledge of astronomy, sculpture, and symbolic architecture. The wheels act as sundials.</p>
+      </div>
+      <button class="btn-toggle">Read More</button>
+    </div>
+
+    <div class="gallery-item">
+      <h2>Traditional Thali Meal</h2>
+      <p>The Indian thali offers a variety of dishes on a single platter, symbolizing harmony in diversity.</p>
+      <div class="more-text">
+        <p>Each region has its unique version — with rice, breads, curries, chutneys, pickles, and desserts served in a balanced way.</p>
+      </div>
+      <button class="btn-toggle">Read More</button>
+    </div>
+
+  </main>
+
+  <footer>
+    © 2025 Virtual Tour of India | Discover Culture Through Words
+  </footer>
+
+  <script>
+    const buttons = document.querySelectorAll('.btn-toggle');
+
+    buttons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const moreText = btn.previousElementSibling;
+        const isVisible = moreText.style.display === 'block';
+        moreText.style.display = isVisible ? 'none' : 'block';
+        btn.textContent = isVisible ? 'Read More' : 'Read Less';
+      });
+    });
+  </script>
+
+</body>
+</html>

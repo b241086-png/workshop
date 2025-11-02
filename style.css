@@ -1,0 +1,230 @@
+ * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f1f0b5;
+    }
+
+    header {
+      background: linear-gradient(to right, rgba(232, 242, 102, 0.75), #e6c688);
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      text-shadow: 1px 1px #333;
+    }
+
+    /* Navigation bar */
+    nav {
+      background-color: #008080; /* teal */
+    }
+
+    .nav-menu {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .nav-menu > li {
+      position: relative;
+    }
+
+    .nav-menu a {
+      display: block;
+      padding: 15px 20px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .nav-menu a:hover {
+      background-color: #006666;
+    }
+
+    /* Dropdown */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #20b2aa;
+      min-width: 180px;
+      z-index: 100;
+    }
+
+    .dropdown-content li a {
+      padding: 12px 16px;
+      font-weight: normal;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+#e6c688;
+
+    /* Mobile responsive */
+    @media (max-width: 768px) {
+      .nav-menu {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .dropdown-content {
+        position: static;
+        width: 100%;
+      }
+    }
+
+    /* Decorative separator */
+    .divider {
+      height: 5px;
+      background: linear-gradient(to right, #ff9933, white, #138808);
+    }
+    #id1{
+      color: #eae439;
+      font-size: 100px;
+      text-align: center;
+    }
+    .festivals{
+      background-color:  #f6f5cc;
+      height: 400px;
+      text-align: center;
+    }
+    #fest{
+      color:#a38718;
+      text-align: center;
+      font-size: 15px; ;
+     }
+      .clickable-image {
+      width: 300px;
+      height: auto;
+      border: 2px solid #555;
+      border-radius: 8px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .clickable-image:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+    }
+
+    .image-link {
+      text-decoration: none;
+    }
+    .food{
+      height: 400px;
+      text-align: center;
+      background-color: #f6f5cc;
+    }
+     #id2{
+      color: #eae439;
+      font-size: 100px;
+      text-align: center;
+    }
+     #fo{
+      color:#a38718;
+      text-align: center;
+      font-size: 15px; ;
+     }
+     .clickable{
+       width: 300px;
+      height: 200px;
+      border: 2px solid #555;
+      border-radius: 8px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+     }
+     .click{
+       width: 300px;
+      height: 200px;
+      border: 2px solid #555;
+      border-radius: 8px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+     }
+     .dance{
+      height: 400px;
+      text-align: center;
+      background-color: #f6f5cc;
+    }
+     #id3{
+      color: #eae439;
+      font-size: 100px;
+      text-align: center;
+    }
+    #dan{
+      color:#a38718;
+      text-align: center;
+      font-size: 15px; ;
+     }
+     
+     .music{
+      height: 400px;
+      text-align: center;
+      background-color: #f6f5cc;
+    }
+     #id4{
+      color: #eae439;
+      font-size: 100px;
+      text-align: center;
+    }
+    #mus{
+      color:#a38718;
+      text-align: center;
+      font-size: 15px; ;
+     }
+     .c{
+       width: 300px;
+      height: 200px;
+      border: 2px solid #555;
+      border-radius: 8px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+     }
+
+     .footer {
+    background: #beca77;
+    color: #f1f1f1;
+    padding: 40px 20px;
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+    margin-top: 40px;
+  }
+
+  .footer h2 {
+    margin-bottom: 10px;
+    color: #ffab00;
+  }
+
+  .footer p {
+    margin: 5px 0;
+    font-size: 1rem;
+  }
+
+  .footer-links {
+    margin: 15px 0;
+  }
+
+  .footer-links a {
+    margin: 0 12px;
+    color: #f1f1f1;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .footer-links a:hover {
+    text-decoration: underline;
+    color: #ffd740;
+  }
+
+  @media (max-width: 600px) {
+    .footer-links a {
+      display: block;
+      margin: 8px 0;
+    }
+  }

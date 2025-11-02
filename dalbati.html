@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dal Baati Churma - Virtual Tour India</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fefae0;
+      color: #333;
+    }
+
+    header {
+      background-color: #d4a373;
+      color: white;
+      text-align: center;
+      padding: 25px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+
+    .description {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+      justify-content: center;
+    }
+
+    .gallery img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    button {
+      background-color: #bc6c25;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    button:hover {
+      background-color: #9c4f1b;
+    }
+
+    .more-info {
+      display: none;
+      margin-top: 15px;
+      font-style: italic;
+      background: #fff6e0;
+      padding: 15px;
+      border-left: 4px solid #bc6c25;
+      border-radius: 5px;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Dal Baati Churma - Taste of Rajasthan</h1>
+    <p>Part of your Virtual Tour of India 🇮🇳</p>
+  </header>
+
+  <div class="container">
+    <div class="description">
+      <p>
+        Dal Baati Churma is a traditional Rajasthani dish consisting of three components:
+        spicy dal (lentils), baked wheat balls called baati, and sweet churma made from crushed baati mixed with ghee and jaggery or sugar.
+        It is a symbol of Rajasthani hospitality and pride, often served during festivals and feasts.
+      </p>
+
+      <button onclick="toggleMoreInfo()">More Info</button>
+      <div class="more-info" id="moreInfo">
+        <p>
+          Baatis are usually baked over firewood or in a clay oven, giving them a unique smoky flavor.
+          The dal is made from a mix of arhar, chana, and moong dals, spiced with Rajasthani tempering.
+          Churma, the sweet element, balances the spicy and savory flavors, making it a wholesome and royal meal.
+        </p>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <img src="dal bati churma.jpeg" alt="Dal Baati Churma Dish">
+      
+      <img src="Churma Sweet.jpeg" alt="Churma Sweet">
+      <pre>
+        <p style="font-size: 20px";> Dal Baati Churma Dish                     Churma Sweet  </p>
+      </pre>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Virtual Tour India. All rights reserved.
+  </footer>
+
+  <script>
+    function toggleMoreInfo() {
+      var moreInfo = document.getElementById("moreInfo");
+      if (moreInfo.style.display === "none" || moreInfo.style.display === "") {
+        moreInfo.style.display = "block";
+      } else {
+        moreInfo.style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+</html>

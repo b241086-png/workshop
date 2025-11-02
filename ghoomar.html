@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ghoomar - Virtual Tour of India</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #fbeec1, #f5d5a4);
+      color: #333;
+    }
+
+    header {
+      background-color: #8e3e63;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .description {
+      margin-top: 20px;
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    .more-text {
+      display: none;
+      margin-top: 10px;
+    }
+
+    button {
+      background-color: #8e3e63;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      margin-top: 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+
+    button:hover {
+      background-color: #a54e7b;
+    }
+
+    iframe {
+      margin-top: 30px;
+      width: 100%;
+      height: 400px;
+      border: none;
+      border-radius: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #8e3e63;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Ghoomar Dance - Rajasthan</h1>
+    <p>A cultural gem from the land of kings</p>
+  </header>
+
+  <div class="container">
+    
+    <div class="description">
+      <p>
+        Ghoomar is a traditional folk dance of Rajasthan, performed by women in swirling robes accompanied by traditional songs.
+        Ghoomar, derived from the Rajasthani word "ghoomna" meaning "to twirl," is a traditional folk dance originating from the Bhil tribe and later adopted by Rajput communities in Rajasthan, India. The dance is characterized by graceful swirling and twirling movements, often performed by women in flowing ghagra (skirts)
+      </p>
+
+      <div class="more-text" id="moreText">
+        <p>
+          This graceful dance is characterized by its elegant pirouettes and rhythmic footwork. It originated in the Bhil tribe and was later adopted by the Rajputs. Ghoomar is usually performed during festivals like Teej, Gangaur, and on wedding occasions. The women wear colorful ghagras and cover their faces with veils, creating a mesmerizing visual experience.
+        </p>
+      </div>
+
+      <button onclick="toggleText()">Show More</button><br><br>
+ <img src="ghooar1.jpeg" alt="Ghoomar Dance Image">
+
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Virtual Tour of India | Ghoomar Dance
+  </footer>
+
+  <script>
+    function toggleText() {
+      const text = document.getElementById("moreText");
+      const btn = document.querySelector("button");
+      if (text.style.display === "none" || text.style.display === "") {
+        text.style.display = "block";
+        btn.textContent = "Show Less";
+      } else {
+        text.style.display = "none";
+        btn.textContent = "Show More";
+      }
+    }
+  </script>
+
+</body>
+</html>

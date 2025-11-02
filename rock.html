@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rock Music in India - Virtual Tour</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #a19e9e;
+      color: #f1f1f1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      display: flex;
+      max-width: 1000px;
+      width: 100%;
+      background: #a39898;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+      border-radius: 12px;
+      overflow: hidden;
+      flex-wrap: wrap;
+    }
+
+    .left, .right {
+      flex: 1 1 400px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .left {
+      background: #474646;
+      color: #fff;
+    }
+
+    .left h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #ff1744;
+    }
+
+    .left p {
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+
+    .more-text {
+      display: none;
+      margin-top: 15px;
+      font-size: 1rem;
+      color: #ccc;
+    }
+
+    .btn-toggle {
+      margin-top: 20px;
+      background: #ff1744;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      font-size: 1rem;
+      color: white;
+      cursor: pointer;
+      align-self: flex-start;
+      transition: background 0.3s ease;
+    }
+
+    .btn-toggle:hover {
+      background: #f50057;
+    }
+
+    .right img,
+    .right iframe {
+      width: 100%;
+      border-radius: 12px;
+      max-height: 350px;
+      object-fit: cover;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+    }
+
+    @media (max-width: 800px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .left, .right {
+        padding: 20px;
+      }
+
+      .right img,
+      .right iframe {
+        max-height: 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <main class="container" role="main" aria-label="Rock Music of India">
+
+    <!-- Left: Text Info -->
+    <section class="left">
+      <h1>Rock Music in India</h1>
+      <p>
+        Indian rock music blends the raw energy of Western rock with India's own cultural, regional, and linguistic diversity. From indie scenes to mainstream, it has found a passionate fanbase across generations.
+      </p>
+
+      <div class="more-text" id="moreText">
+        <p>
+          Pioneered by bands like **Indus Creed**, **Parikrama**, and **Euphoria**, Indian rock took off in the 1990s and 2000s. Today, genres like alternative, metal, and fusion are thriving in cities like Shillong, Pune, and Bengaluru.
+        </p>
+        <p>
+          Events like **NH7 Weekender** and platforms like **YouTube** have helped independent rock bands reach new audiences. Languages range from Hindi to Tamil to Khasi — proving rock in India is truly multilingual and multicultural.
+        </p>
+      </div>
+
+      <button class="btn-toggle" aria-expanded="false" aria-controls="moreText" id="toggleBtn">
+        Show More
+      </button>
+    </section>
+
+    <!-- Right: Image & Video -->
+    <section class="right">
+      <img 
+        src="rock.jpeg" 
+        alt="Indian rock band performing live on stage"
+      />
+
+      
+    </section>
+
+  </main>
+
+  <script>
+    const toggleBtn = document.getElementById('toggleBtn');
+    const moreText = document.getElementById('moreText');
+
+    toggleBtn.addEventListener('click', () => {
+      const isHidden = moreText.style.display === 'none' || moreText.style.display === '';
+      moreText.style.display = isHidden ? 'block' : 'none';
+      toggleBtn.textContent = isHidden ? 'Show Less' : 'Show More';
+      toggleBtn.setAttribute('aria-expanded', isHidden);
+    });
+  </script>
+
+</body>
+</html>

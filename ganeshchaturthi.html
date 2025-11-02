@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Diwali - Festival of Lights</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff8e1;
+      color: #333;
+    }
+
+    header {
+      background: url('https://upload.wikimedia.org/wikipedia/commons/2/20/Diwali_diya_lamps.jpg') no-repeat center center/cover;
+      height: 300px;
+      color: white;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      text-shadow: 2px 2px 5px #000;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      font-style: italic;
+      text-shadow: 1px 1px 3px #000;
+    }
+
+    section {
+      padding: 2rem;
+    }
+
+    .about {
+      background-color: #ffecb3;
+    }
+
+    .celebrations ul {
+      margin-top: 1rem;
+      padding-left: 1.5rem;
+    }
+
+    .celebrations li {
+      margin-bottom: 0.5rem;
+    }
+
+    .light-diya {
+      margin-top: 2rem;
+      text-align: center;
+    }
+
+    button {
+      background-color: #ede548;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #dcdc3a;
+    }
+
+    #diya {
+      margin-top: 20px;
+      display: none;
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        opacity: 0.5;
+        filter: drop-shadow(0 0 10px rgb(219, 219, 56));
+      }
+      to {
+        opacity: 1;
+        filter: drop-shadow(0 0 25px gold);
+      }
+    }
+
+    footer {
+      background-color: #d8dd3e;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+    h2{
+        text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Ganesha Chaturthi</h1>
+    <p>The Festival of Lord Ganesha</p>
+  </header>
+
+  <section class="about">
+    <h2>About Lord Ganesha </h2>
+    <p>Ganesh Chaturthi, also known as Vinayaka Chaturthi or Vinayaka Chavithi, is a Hindu festival celebrating the birth of Lord Ganesha, the god of wisdom, prosperity, and new beginnings. It's a 10-day festival, typically falling in August or September, that involves setting up Ganesha idols, offering prayers and sweets, and concluding with the visarjan</p></section>
+
+  <section class="celebrations">
+    <h2>How Ganesh Chaturthi is Celebrated</h2>
+    <ul>
+      <li>installing Ganesha idols in homes and public spaces</li>
+      <li>performing daily prayers</li>
+      <li> offering sweets like modaks, and culminating </li>
+      <li>infuses an atmosphere akin to a carnival</li>
+      <li>Bursting crackers</li>
+    </ul>
+  </section>
+
+  <div class="light-diya">
+    <button onclick="ganeshpooja()">Ganesh Pooja 🙏</button>
+    <div id="diya">
+      <img src="ganesh pooja.jpeg" alt="Glowing Diya" width="300px" />
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Diwali Celebration. Stay safe & shine bright!</p>
+  </footer>
+
+  <script>
+    function ganeshpooja() {
+      const diya = document.getElementById('diya');
+      diya.style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Classical Music of India - Split Screen</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #d5a1df;
+      color: #222;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      display: flex;
+      max-width: 900px;
+      width: 100%;
+      background: #e1c7e6;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      overflow: hidden;
+      flex-wrap: wrap;
+    }
+
+    .left, .right {
+      flex: 1 1 400px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .left {
+      background: #8c17a3;
+      color: white;
+    }
+
+    .left h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      letter-spacing: 1.2px;
+    }
+
+    .left p {
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+
+    .more-text {
+      display: none;
+      margin-top: 15px;
+      font-size: 1rem;
+      color: #d1c4e9;
+    }
+
+    .btn-toggle {
+      margin-top: 20px;
+      background:#e4aaef;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      font-size: 1rem;
+      color: rgb(45, 55, 166);
+      cursor: pointer;
+      align-self: flex-start;
+      transition: background 0.3s ease;
+      user-select: none;
+    }
+
+    .btn-toggle:hover {
+      background: #9c27b0;
+    }
+
+    .right img,
+    .right iframe {
+      width: 100%;
+      border-radius: 12px;
+      max-height: 400px;
+      object-fit: cover;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    }
+
+    @media (max-width: 800px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .left, .right {
+        flex: 1 1 100%;
+        padding: 20px;
+      }
+
+      .right img,
+      .right iframe {
+        max-height: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <main class="container" role="main" aria-label="Classical Music of India Split Screen Layout">
+
+    <section class="left">
+      <h1>Classical Music of India</h1>
+      <p>
+        Indian classical music is one of the oldest musical traditions in the world, with roots tracing back over 2000 years. It is deeply spiritual and often regarded as a path to self-realization.
+      </p>
+
+      <div class="more-text" id="moreText">
+        <p>
+          There are two main traditions: <strong>Hindustani</strong> (North Indian) and <strong>Carnatic</strong> (South Indian). While both share the same ancient origins, they differ in style, instruments, and performance.
+        </p>
+        <p>
+          Key elements include the <em>raga</em> (melodic framework) and <em>tala</em> (rhythmic cycles). Traditional instruments include the sitar, sarod, tabla, veena, mridangam, and bansuri.
+        </p>
+        <p>
+          Great maestros like Ravi Shankar, Bhimsen Joshi, M. S. Subbulakshmi, and Balamuralikrishna have taken Indian classical music to global audiences.
+        </p>
+      </div>
+
+      <button class="btn-toggle" aria-expanded="false" aria-controls="moreText" id="toggleBtn">
+        Show More
+      </button>
+    </section>
+
+    <section class="right">
+      <img 
+        src="classical1.jpeg" 
+        alt="Various Indian classical music instruments like sitar, tabla and flute" 
+        loading="lazy"
+      />
+
+      
+    </section>
+
+  </main>
+
+  <script>
+    const toggleBtn = document.getElementById('toggleBtn');
+    const moreText = document.getElementById('moreText');
+
+    toggleBtn.addEventListener('click', () => {
+      const isHidden = moreText.style.display === 'none' || moreText.style.display === '';
+      moreText.style.display = isHidden ? 'block' : 'none';
+      toggleBtn.textContent = isHidden ? 'Show Less' : 'Show More';
+      toggleBtn.setAttribute('aria-expanded', isHidden);
+    });
+  </script>
+
+</body>
+</html>
